@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import axios from 'axios';
+import Form from './components/Form';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      gamesArr: []
+    }
+  }
+
+  componentDidMount() {
+    axios.get('/api/games')
+    .then(res => this.setState({gamesArr: res.data}))
+    .catch(err => console.log(err))
+  }
+
+  addGame = (title, platform, hours) => {
+    axios.post('/api/games', {title, platform, hours})
+    .then(res => this.setState({gamesArr: res.data}))
+    .catch(err => console.log(err))
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Form addGameFn={this.addGame}/>
+      </div>
+    );
+  }
 }
 
 export default App;
