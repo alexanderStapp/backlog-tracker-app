@@ -9,7 +9,7 @@ let games = [
     {
         id: 2,
         completed: false,
-        title: 'mario game',
+        title: 'dead game',
         platform: 'wiiu',
         hours: 10
     }
@@ -42,6 +42,8 @@ module.exports = {
     },
 
     editGame: (req, res) => {
+        console.log(req.params)
+        console.log(req.body)
         const {id} = req.params
         const {title, platform, hours} = req.body
         const index = games.findIndex(e => e.id === +id)
