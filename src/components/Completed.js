@@ -1,4 +1,4 @@
-// import CompGame from './CompGame'
+import CompGame from './CompGame'
 
 function Completed(props) {
     return (
@@ -7,9 +7,9 @@ function Completed(props) {
             {props.gamesArr.map(game => {
                 return (
                     <div>
-                        {/* <CompGame
+                        <CompGame
                             game={game}
-                        /> */}
+                        />
                     </div>
                 )
             })}

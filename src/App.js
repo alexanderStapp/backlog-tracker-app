@@ -51,12 +51,12 @@ class App extends Component {
       <div className="App">
         <Form addGameFn={this.addGame}/>
         <Backlog
-          gamesArr={this.state.gamesArr}
+          gamesArr={this.state.gamesArr.filter(game => game.completed === false)}
           editGame={this.editGame}
           deleteGame={this.deleteGame}
           completeGame={this.completeGame}
         />
-        <Completed gamesArr={this.state.gamesArr}/>
+        <Completed gamesArr={this.state.gamesArr.filter(game => game.completed === 'true')}/>
       </div>
     );
   }

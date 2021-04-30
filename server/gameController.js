@@ -56,8 +56,7 @@ module.exports = {
     editComplete: (req, res) => {
         console.log(req.params)
         console.log(req.body)
-        const {id} = req.params
-        const {completed} = req.body
+        const {id, completed} = req.params
         const index = games.findIndex(e => e.id === +id)
         games[index].completed = completed
         res.status(200).send(games)

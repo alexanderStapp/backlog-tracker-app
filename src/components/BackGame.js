@@ -29,7 +29,6 @@ class BackGame extends Component {
     }
 
     handleSave = () => {
-        console.log(this.props)
         const {id} = this.props.game
         const {title, platform, hours} = this.state
         this.props.editGame(id, title, platform, hours)
@@ -41,11 +40,12 @@ class BackGame extends Component {
         })
     }
 
-
-
     render() {
         return this.state.editMode ? (
             <div>
+                <p>{this.props.game.title}</p>
+                <p>{this.props.game.platform}</p>
+                <p>{this.props.game.hours}</p>
                 <input
                     value={this.state.title}
                     onChange={e => this.handleTitle(e.target.value)}
