@@ -1,5 +1,3 @@
-const { getMovies } = require("../../wlr1-nodb-full-review/server/controllers/movieController")
-
 let games = [
     {
         id: 1,
