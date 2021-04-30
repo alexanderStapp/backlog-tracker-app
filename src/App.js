@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Form from './components/Form';
 import Backlog from './components/Backlog'
+import Completed from './components/Completed'
 
 
 class App extends Component {
@@ -37,7 +38,13 @@ class App extends Component {
     .then(res => this.setState({gamesArr: res.data}))
     .catch(err => console.log(err))
   }
-  
+
+  completeGame = (id, completed) => {
+    axios.put(`/api/games/${id}/${completed}`)
+    .then(res => this.setState({gamesArr: res.data}))
+    .catch(err => console.log(err))
+  }
+
   render() {
     console.log(this.state.gamesArr)
     return (
@@ -47,7 +54,9 @@ class App extends Component {
           gamesArr={this.state.gamesArr}
           editGame={this.editGame}
           deleteGame={this.deleteGame}
+          completeGame={this.completeGame}
         />
+        <Completed gamesArr={this.state.gamesArr}/>
       </div>
     );
   }

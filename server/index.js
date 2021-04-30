@@ -11,5 +11,6 @@ app.get('/api/games', tc.getGames)
 app.post('/api/games', tc.addGame)
 app.delete('/api/games/:id', tc.deleteGame)
 app.put('/api/games/:id', tc.editGame)
+app.put('/api/games/:id/:completed', tc.editComplete)
 
 app.listen(PORT, () => console.log(`server is running on ${PORT} :3`))

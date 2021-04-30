@@ -10,6 +10,7 @@ function Backlog(props) {
                         game={game}
                         editGame={props.editGame}
                         deleteGame={props.deleteGame}
+                        completeGame={props.completeGame}
                     />
                 )
             })}

@@ -41,6 +41,8 @@ class BackGame extends Component {
         })
     }
 
+
+
     render() {
         return this.state.editMode ? (
             <div>
@@ -66,6 +68,7 @@ class BackGame extends Component {
                 <p>{this.props.game.title}</p>
                 <p>{this.props.game.platform}</p>
                 <p>{this.props.game.hours}</p>
+                <button onClick={() => this.props.completeGame(this.props.game.id, !this.props.game.completed)}>complete</button>
                 <button onClick={this.toggleEdit}>edit</button>
                 <button onClick={() => this.props.deleteGame(this.props.game.id)}>delete</button>
             </div>

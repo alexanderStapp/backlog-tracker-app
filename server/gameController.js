@@ -51,5 +51,15 @@ module.exports = {
         games[index].platform = platform
         games[index].hours = hours
         res.status(200).send(games)
+    },
+
+    editComplete: (req, res) => {
+        console.log(req.params)
+        console.log(req.body)
+        const {id} = req.params
+        const {completed} = req.body
+        const index = games.findIndex(e => e.id === +id)
+        games[index].completed = completed
+        res.status(200).send(games)
     }
 }
