@@ -73,7 +73,10 @@ class BackGame extends Component {
                         onChange={e => this.handleHours(e.target.value)}
                         placeholder={this.props.game.hours}
                         />
-                    <button onClick={this.handleSave}>save</button>
+                    <div className='edit-controls'>
+                        <button onClick={this.toggleEdit}>cancel</button>
+                        <button onClick={this.handleSave}>save</button>
+                    </div>
                 </form>
             </div>
         ) : (
@@ -83,7 +86,7 @@ class BackGame extends Component {
                     <p id='hours'>{this.props.game.hours} hours remain</p>
                     <p id='platform'>{this.props.game.platform}</p>
                     <div id='controls'>
-                        <button onClick={() => this.props.completeGame(this.props.game.id, !this.props.game.completed)}>complete</button>
+                        <button onClick={() => this.props.completeGame(this.props.game.id, 1)}>complete</button>
                         <button onClick={this.toggleEdit}>edit</button>
                         <button onClick={() => this.props.deleteGame(this.props.game.id)}>delete</button>
                     </div>

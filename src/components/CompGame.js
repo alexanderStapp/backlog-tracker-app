@@ -4,6 +4,7 @@ function CompGame(props) {
         <div className='completed-item'>
             <p>You completed <b>{props.game.title}</b> on {today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate()}</p>
             <p className='pop'><b>platform: </b>{props.game.platform}</p>
+            <button onClick={() => props.completeGame(props.game.id, 0)}>undo</button>
             <p className='pop'><b>hours completed: </b>{props.game.hours}</p>
         </div>
     )

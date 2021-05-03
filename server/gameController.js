@@ -1,7 +1,7 @@
 let games = [
     {
         id: 0,
-        completed: false,
+        completed: 0,
         title: 'test game',
         platform: 'nintendo switch',
         hours: 400
@@ -18,7 +18,7 @@ module.exports = {
         const {title, platform, hours} = req.body
         const game = {
             id: id++,
-            completed: false,
+            completed: 0,
             title,
             platform,
             hours
@@ -38,9 +38,9 @@ module.exports = {
         const {id} = req.params
         const {title, platform, hours} = req.body
         const index = games.findIndex(e => e.id === +id)
-        games[index].title = title
-        games[index].platform = platform
-        games[index].hours = hours
+        games[index].title = title || games[index].title
+        games[index].platform = platform || games[index].platform
+        games[index].hours = hours || games[index].hours
         res.status(200).send(games)
     },
 

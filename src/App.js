@@ -50,7 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <Backlog
-          gamesArr={this.state.gamesArr.filter(game => game.completed === false)}
+          gamesArr={this.state.gamesArr.filter(game => game.completed === 0 || game.completed === '0')}
           editGame={this.editGame}
           deleteGame={this.deleteGame}
           completeGame={this.completeGame}
@@ -60,7 +60,10 @@ class App extends Component {
             addGameFn={this.addGame}
             gamesArr={this.state.gamesArr}
             />
-          <Completed gamesArr={this.state.gamesArr.filter(game => game.completed === 'true')}/>
+          <Completed
+            gamesArr={this.state.gamesArr.filter(game => game.completed === '1')}
+            completeGame={this.completeGame}
+          />
         </div>
       </div>
     );

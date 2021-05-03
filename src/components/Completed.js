@@ -9,6 +9,7 @@ function Completed(props) {
                     <div>
                         <CompGame
                             game={game}
+                            completeGame={props.completeGame}
                         />
                     </div>
                 )
