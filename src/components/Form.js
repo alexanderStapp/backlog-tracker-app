@@ -44,33 +44,35 @@ class Form extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Add Game</h2>
-                <input
-                    value={this.state.title}
-                    onChange={e => this.handleTitle(e.target.value)}
-                    placeholder='title'
-                />
-                <input
-                    value={this.state.platform}
-                    onChange={e => this.handlePlatform(e.target.value)}
-                    placeholder='platform'
-                />
-                {/* <input
-                    type="number"
-                    step="1"
-                    min="1"
-                    // max={this.props.gamesArr.length + 1}
-                    value={this.state.priority}
-                    onChange={e => this.handlePriority(e.target.value)}
-                    // placeholder='priority (1-999)'
-                /> */}
-                <input
-                    value={this.state.hours}
-                    onChange={e => this.handleHours(e.target.value)}
-                    placeholder='hours'
-                />
-                <button onClick={this.handleAdd}>Add to Backlog</button>
+            <div className='add-game'>
+                <form className='form'>
+                    <h3>Add Game</h3>
+                    <input
+                        value={this.state.title}
+                        onChange={e => this.handleTitle(e.target.value)}
+                        placeholder='title'
+                        />
+                    <input
+                        value={this.state.platform}
+                        onChange={e => this.handlePlatform(e.target.value)}
+                        placeholder='platform'
+                        />
+                    {/* <input
+                        type="number"
+                        step="1"
+                        min="1"
+                        // max={this.props.gamesArr.length + 1}
+                        value={this.state.priority}
+                        onChange={e => this.handlePriority(e.target.value)}
+                        // placeholder='priority (1-999)'
+                    /> */}
+                    <input
+                        value={this.state.hours}
+                        onChange={e => this.handleHours(e.target.value)}
+                        placeholder='hours of gameplay remaining'
+                        />
+                    <button className='submit' onClick={this.handleAdd}>Add to Backlog</button>
+                </form>
             </div>
         )
     }

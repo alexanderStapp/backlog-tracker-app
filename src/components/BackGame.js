@@ -47,10 +47,10 @@ class BackGame extends Component {
 
     render() {
         return this.state.editMode ? (
-            <div>
+            <div className='game-card-edit'>
                 <p>{this.props.game.title}</p>
-                <p>{this.props.game.platform}</p>
                 <p>{this.props.game.hours}</p>
+                <p>{this.props.game.platform}</p>
                 <input
                     value={this.state.title}
                     onChange={e => this.handleTitle(e.target.value)}
@@ -69,13 +69,15 @@ class BackGame extends Component {
                 <button onClick={this.handleSave}>save</button>
             </div>
         ) : (
-            <div>
-                <p>{this.props.game.title}</p>
-                <p>{this.props.game.platform}</p>
-                <p>{this.props.game.hours}</p>
-                <button onClick={() => this.props.completeGame(this.props.game.id, !this.props.game.completed)}>complete</button>
-                <button onClick={this.toggleEdit}>edit</button>
-                <button onClick={() => this.props.deleteGame(this.props.game.id)}>delete</button>
+            <div className='game-card'>
+                <p id='title'>{this.props.game.title}</p>
+                <p id='hours'>{this.props.game.hours} hours remain</p>
+                <p id='platform'>{this.props.game.platform}</p>
+                <div id='controls'>
+                    <button onClick={() => this.props.completeGame(this.props.game.id, !this.props.game.completed)}>complete</button>
+                    <button onClick={this.toggleEdit}>edit</button>
+                    <button onClick={() => this.props.deleteGame(this.props.game.id)}>delete</button>
+                </div>
             </div>
         )
     }

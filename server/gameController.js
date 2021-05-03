@@ -1,5 +1,13 @@
-let games = []
-let id = 3
+let games = [
+    {
+        id: 0,
+        completed: false,
+        title: 'test game',
+        platform: 'nintendo switch',
+        hours: 400
+    }
+]
+let id = 2
 
 module.exports = {
     getGames: (_req, res) => {
