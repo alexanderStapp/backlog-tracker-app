@@ -2,14 +2,30 @@
   margin: 0;
 }
 
+.App {
+  padding: 0 10vw 0 10vw;
+  background-color: lightgray;
+  position: relative;
+  height: 100vh;
+}
+
 .add-game {
+  background-color: seagreen;
   border-bottom: 1px solid black;
+  border-left: 1px solid black;
   display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	align-content: space-around;
+  position: relative;
   height: 40vh;
+}
+
+.add-game > h1 {
+  position: absolute;
+  top: 20px;
+  left: 40px;
 }
 
 .form {
@@ -28,17 +44,20 @@
   width: 300px;
 }
 
-.submit {
+.form > button {
   position: absolute;
-  right: 0;
+  right: 12px;
   bottom: 0;
 }
 
 .backlog {
+  background-color: lightyellow;
   border-left: 1px solid black;
+  border-right: 1px solid black;
   float: right;
+  position: relative;
   height: 100vh;
-  width: 35vw;
+  width: 30vw;
 }
 
 .backlog > h3 {
@@ -46,7 +65,7 @@
   margin-left: 30px;
 }
 
-.backlog-list {
+.backlog-item {
   display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -86,13 +105,60 @@
   right: 0;
 }
 
-
-.completed {
-  padding: 40px;
-  height: 40vh;
-  width: 60vw;
+.game-card-edit {
+  background-color: white;
+  border-top: 1px solid black;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  position: fixed;
+  z-index: 5;
+  bottom: 10px;
+  height: 250px;
+  width: 35vw;
 }
 
-.completed >h3 {
-  margin-bottom: 10px;
+.game-card-edit > input {
+  margin: 10px;
+  width: 300px;
+}
+
+.game-card-edit > button {
+  position: absolute;
+  right: 115px;
+  bottom: 25px;
+}
+
+.completed {
+  background-color: pink;
+  border-left: 1px solid black;
+  display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+  padding: 40px;
+  min-height: 49vh;
+}
+
+.completed-item {
+  border: 1px solid grey;
+  margin-top: 10px;
+  padding: 5px 25px 10px 25px;
+}
+
+.pop {
+  display: none;
+}
+
+.completed-item:hover .pop {
+  display: block;
+}
+
+button {
+  background-color: rgb(208, 235, 243);
+  border: none;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
 }

@@ -5,6 +5,48 @@ let games = [
         title: 'test game',
         platform: 'nintendo switch',
         hours: 400
+    },
+    {
+        id: 1,
+        completed: false,
+        title: 'test game',
+        platform: 'nintendo switch',
+        hours: 400
+    },
+    {
+        id: 2,
+        completed: false,
+        title: 'test game',
+        platform: 'nintendo switch',
+        hours: 400
+    },
+    {
+        id: 3,
+        completed: false,
+        title: 'test game',
+        platform: 'nintendo switch',
+        hours: 400
+    },
+    {
+        id: 4,
+        completed: false,
+        title: 'test game',
+        platform: 'nintendo switch',
+        hours: 400
+    },
+    {
+        id: 5,
+        completed: false,
+        title: 'test game',
+        platform: 'nintendo switch',
+        hours: 400
+    },
+    {
+        id: 6,
+        completed: false,
+        title: 'test game',
+        platform: 'nintendo switch',
+        hours: 400
     }
 ]
 let id = 2
@@ -35,8 +77,6 @@ module.exports = {
     },
 
     editGame: (req, res) => {
-        console.log(req.params)
-        console.log(req.body)
         const {id} = req.params
         const {title, platform, hours} = req.body
         const index = games.findIndex(e => e.id === +id)
@@ -47,8 +87,6 @@ module.exports = {
     },
 
     editComplete: (req, res) => {
-        console.log(req.params)
-        console.log(req.body)
         const {id, completed} = req.params
         const index = games.findIndex(e => e.id === +id)
         games[index].completed = completed

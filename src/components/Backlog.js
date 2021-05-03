@@ -4,7 +4,6 @@ function Backlog(props) {
     return (
         <aside className='backlog'>
             <h3>Backlog</h3>
-            <div className='backlog-list'>
                 {props.gamesArr.map(game => {
                     return (
                         <BackGame
@@ -15,7 +14,6 @@ function Backlog(props) {
                         />
                     )
                 })}
-            </div>
         </aside>
     )
 }

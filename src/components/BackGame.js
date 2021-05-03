@@ -47,36 +47,46 @@ class BackGame extends Component {
 
     render() {
         return this.state.editMode ? (
-            <div className='game-card-edit'>
-                <p>{this.props.game.title}</p>
-                <p>{this.props.game.hours}</p>
-                <p>{this.props.game.platform}</p>
-                <input
-                    value={this.state.title}
-                    onChange={e => this.handleTitle(e.target.value)}
-                    placeholder={this.props.game.title}
-                />
-                <input
-                    value={this.state.platform}
-                    onChange={e => this.handlePlatform(e.target.value)}
-                    placeholder={this.props.game.platform}
-                />
-                <input
-                    value={this.state.hours}
-                    onChange={e => this.handleHours(e.target.value)}
-                    placeholder={this.props.game.hours}
-                />
-                <button onClick={this.handleSave}>save</button>
+            <div className='edit-mode'>
+                <div className='backlog-item'>
+                    <div className='game-card'>
+                        <p id='title'><i>{this.props.game.title}</i></p>
+                        <p id='hours'><i>{this.props.game.hours} hours remain</i></p>
+                        <p id='platform'><i>{this.props.game.platform}</i></p>
+                    </div>
+                </div>
+                <form className='game-card-edit'>
+                    <h3>Edit {this.props.game.title}</h3>
+                    <input
+                        value={this.state.title}
+                        onChange={e => this.handleTitle(e.target.value)}
+                        placeholder={this.props.game.title}
+                        />
+                    <input
+                        value={this.state.platform}
+                        onChange={e => this.handlePlatform(e.target.value)}
+                        placeholder={this.props.game.platform}
+                        />
+                    <input
+                        type='number'
+                        value={this.state.hours}
+                        onChange={e => this.handleHours(e.target.value)}
+                        placeholder={this.props.game.hours}
+                        />
+                    <button onClick={this.handleSave}>save</button>
+                </form>
             </div>
         ) : (
-            <div className='game-card'>
-                <p id='title'>{this.props.game.title}</p>
-                <p id='hours'>{this.props.game.hours} hours remain</p>
-                <p id='platform'>{this.props.game.platform}</p>
-                <div id='controls'>
-                    <button onClick={() => this.props.completeGame(this.props.game.id, !this.props.game.completed)}>complete</button>
-                    <button onClick={this.toggleEdit}>edit</button>
-                    <button onClick={() => this.props.deleteGame(this.props.game.id)}>delete</button>
+            <div className='backlog-item'>
+                <div className='game-card'>
+                    <p id='title'>{this.props.game.title}</p>
+                    <p id='hours'>{this.props.game.hours} hours remain</p>
+                    <p id='platform'>{this.props.game.platform}</p>
+                    <div id='controls'>
+                        <button onClick={() => this.props.completeGame(this.props.game.id, !this.props.game.completed)}>complete</button>
+                        <button onClick={this.toggleEdit}>edit</button>
+                        <button onClick={() => this.props.deleteGame(this.props.game.id)}>delete</button>
+                    </div>
                 </div>
             </div>
         )
