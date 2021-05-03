@@ -49,7 +49,10 @@ class App extends Component {
     console.log(this.state.gamesArr)
     return (
       <div className="App">
-        <Form addGameFn={this.addGame}/>
+        <Form
+          addGameFn={this.addGame}
+          gamesArr={this.state.gamesArr}
+        />
         <Backlog
           gamesArr={this.state.gamesArr.filter(game => game.completed === false)}
           editGame={this.editGame}

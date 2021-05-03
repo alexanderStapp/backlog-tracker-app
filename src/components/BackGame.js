@@ -8,6 +8,7 @@ class BackGame extends Component {
             editMode: false,
             title: '',
             platform: '',
+            // priority: '',
             hours: ''
         }
     }
@@ -19,6 +20,10 @@ class BackGame extends Component {
     handlePlatform = (value) => {
         this.setState({platform: value})
     }
+
+    // handlePriority = (value) => {
+    //     this.setState({platform: value})
+    // }
 
     handleHours = (value) => {
         this.setState({hours: value})

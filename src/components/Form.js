@@ -7,7 +7,8 @@ class Form extends Component {
         this.state = {
             title: '',
             platform: '',
-            hours: '',
+            // priority: '',
+            hours: ''
         }
     }
 
@@ -19,6 +20,10 @@ class Form extends Component {
         this.setState({platform: value})
     }
 
+    // handlePriority = (value) => {
+    //     this.setState({priority: value})
+    // }
+
     handleHours = (value) => {
         this.setState({hours: value})
     }
@@ -27,6 +32,7 @@ class Form extends Component {
         this.props.addGameFn(
             this.state.title,
             this.state.platform,
+            // this.state.priority,
             this.state.hours
         )
         this.setState({
@@ -50,6 +56,15 @@ class Form extends Component {
                     onChange={e => this.handlePlatform(e.target.value)}
                     placeholder='platform'
                 />
+                {/* <input
+                    type="number"
+                    step="1"
+                    min="1"
+                    // max={this.props.gamesArr.length + 1}
+                    value={this.state.priority}
+                    onChange={e => this.handlePriority(e.target.value)}
+                    // placeholder='priority (1-999)'
+                /> */}
                 <input
                     value={this.state.hours}
                     onChange={e => this.handleHours(e.target.value)}
