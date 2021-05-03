@@ -6,50 +6,8 @@ let games = [
         platform: 'nintendo switch',
         hours: 400
     },
-    {
-        id: 1,
-        completed: false,
-        title: 'test game',
-        platform: 'nintendo switch',
-        hours: 400
-    },
-    {
-        id: 2,
-        completed: false,
-        title: 'test game',
-        platform: 'nintendo switch',
-        hours: 400
-    },
-    {
-        id: 3,
-        completed: false,
-        title: 'test game',
-        platform: 'nintendo switch',
-        hours: 400
-    },
-    {
-        id: 4,
-        completed: false,
-        title: 'test game',
-        platform: 'nintendo switch',
-        hours: 400
-    },
-    {
-        id: 5,
-        completed: false,
-        title: 'test game',
-        platform: 'nintendo switch',
-        hours: 400
-    },
-    {
-        id: 6,
-        completed: false,
-        title: 'test game',
-        platform: 'nintendo switch',
-        hours: 400
-    }
 ]
-let id = 2
+let id = 1
 
 module.exports = {
     getGames: (_req, res) => {

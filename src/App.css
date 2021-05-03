@@ -75,6 +75,7 @@
 
 .game-card {
   border: 1px solid black;
+  border-radius: 4px;
   height: 5vw;
   width: 24vw;
   margin-top: 15px;
@@ -102,7 +103,7 @@
 #controls {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 2px;
 }
 
 .game-card-edit {
@@ -117,7 +118,7 @@
   z-index: 5;
   bottom: 10px;
   height: 250px;
-  width: 35vw;
+  width: 30vw;
 }
 
 .game-card-edit > input {
@@ -143,21 +144,22 @@
 
 .completed-item {
   border: 1px solid grey;
+  border-radius: 4px;
   margin-top: 10px;
-  padding: 5px 25px 10px 25px;
+  padding: 5px 20px 12px 20px;
+  overflow: hidden;
+  height: 15px;
+  transition: .2s ease-out;
 }
 
-.pop {
-  display: none;
-}
-
-.completed-item:hover .pop {
-  display: block;
+.completed-item:hover {
+  height: 60px;
 }
 
 button {
   background-color: rgb(208, 235, 243);
   border: none;
+  border-radius: 4px;
   text-align: center;
   margin: 4px 2px;
   cursor: pointer;
