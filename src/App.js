@@ -50,7 +50,13 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1 className='header-title'>Backlog Tracker</h1>
+            <h1 className='header-title'>Backlog Tracker</h1>
+            <nav className='nav-bar'>
+              <h3>Home</h3>
+              <h3>About</h3>
+              <h3>Export</h3>
+              <h3>Login</h3>
+            </nav>
         </header>
         <Backlog
           gamesArr={this.state.gamesArr.filter(game => game.completed === 0 || game.completed === '0')}

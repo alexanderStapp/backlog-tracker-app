@@ -10,9 +10,18 @@
   height: 100vh;
 }
 
-
-.header-title {
+header {
   color: white;
+  display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.nav-bar {
+  display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+  min-width: 20vw;
 }
 
 /* add game section */
