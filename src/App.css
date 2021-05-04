@@ -72,6 +72,12 @@
   margin-left: 30px;
 }
 
+#empty-res {
+  color: #3A3A3A;
+  margin-top: 20px;
+  text-align: center;
+}
+
 .backlog-item {
   display: flex;
 	flex-direction: column;
@@ -134,7 +140,7 @@
 }
 
 .edit-mode > .backlog-item > .game-card > p {
-  color: rgb(58, 58, 58);
+  color: #3A3A3A;
 }
 
 .game-card-edit > input {

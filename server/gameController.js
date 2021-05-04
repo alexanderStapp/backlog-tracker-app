@@ -1,12 +1,4 @@
-let games = [
-    {
-        id: 0,
-        completed: 0,
-        title: 'test game',
-        platform: 'nintendo switch',
-        hours: 400
-    },
-]
+let games = []
 let id = 1
 
 module.exports = {
