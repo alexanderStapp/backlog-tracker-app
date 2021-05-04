@@ -10,6 +10,7 @@
   height: 100vh;
 }
 
+/* header section */
 header {
   color: white;
   display: flex;
@@ -41,6 +42,7 @@ header {
   margin-left: 30px;
 }
 
+/* user input form */
 .form {
   display: flex;
 	flex-direction: column;
