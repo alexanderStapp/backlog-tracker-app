@@ -54,7 +54,7 @@ class App extends Component {
             <nav className='nav-bar'>
               <h3>Home</h3>
               <h3>About</h3>
-              <h3>Export</h3>
+              <h3>Extension</h3>
               <h3>Login</h3>
             </nav>
         </header>
