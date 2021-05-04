@@ -3,30 +3,33 @@
 }
 
 .App {
-  padding: 0 10vw 0 10vw;
+  padding: 5vh 18vw 0 18vw;
   background-color: lightgray;
   position: relative;
   height: 100vh;
 }
 
+
+/* .header-title {
+  text-align: center;
+  position: absolute;
+  top: 0;
+} */
+
+/* add game section */
 .add-game {
   background-color: seagreen;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	align-content: space-around;
+  border: 1px solid black;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   position: relative;
-  height: 40vh;
-  width: 90vh;
+  height: 35vh;
+  width: 32vw;
 }
 
-.add-game > h1 {
-  position: absolute;
-  top: 20px;
-  left: 40px;
+.add-game > h3 {
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 .form {
@@ -36,7 +39,7 @@
   align-items: flex-start;
   align-content: space-around;
   position: relative;
-  margin-top: 20px;
+  margin: auto;
   width: 330px;
   height: 200px;
 }
@@ -52,19 +55,19 @@
   bottom: 0;
 }
 
+/* backlog section */
 .backlog {
   background-color: lightyellow;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border: 1px solid black;
+  border-radius: 4px;
   float: right;
   position: relative;
-  height: 100vh;
+  min-height: 85vh;
   width: 30vw;
-  margin-top: 50px;
 }
 
 .backlog > h3 {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 30px;
 }
 
@@ -135,21 +138,31 @@
   bottom: 25px;
 }
 
+/* conpleted section */
 .completed {
   background-color: pink;
   border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-  padding: 40px;
   min-height: 49vh;
-  width: 37vw;
+  width: 32vw;
+}
+
+.completed > h3 {
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 .completed-item {
   border: 1px solid grey;
   border-radius: 4px;
   margin-top: 10px;
+  margin-left: 60px;
   padding: 5px 20px 12px 20px;
   overflow: hidden;
   height: 15px;
@@ -161,9 +174,12 @@
 }
 
 .completed-item:hover {
-  height: 60px;
+  height: 74px;
 }
 
+.pop {
+  margin-top: 7px;
+}
 
 button {
   background-color: rgb(208, 235, 243);

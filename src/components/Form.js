@@ -44,11 +44,9 @@ class Form extends Component {
 
     render() {
         return (
-            <div className='main'>
-                <section className='add-game'>
-                <h1>Backlog Tracker</h1>
+            <div className='add-game'>
+                <h3>Add Game</h3>
                     <form className='form'>
-                        <h3>Add Game</h3>
                         <input
                             value={this.state.title}
                             onChange={e => this.handleTitle(e.target.value)}
@@ -76,8 +74,7 @@ class Form extends Component {
                             />
                         <button onClick={this.handleAdd}>Add to Backlog</button>
                     </form>
-                </section>
-            </div>
+                </div>
         )
     }
 }
